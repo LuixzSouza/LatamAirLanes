@@ -48,12 +48,13 @@ const alumnisans = Alumni_Sans({
 });
 
 const leaguegothic = League_Gothic({ 
-  weight: ["400", "500", "600", "700", "800", "900"], // Ajuste o peso para valores válidos
-  style: ["normal"], // Estilo
-  variable: ["--font-leaguegothic"], // Definir o nome de variável
-  subsets: ["latin"], // Padrão
-  display: "swap",  // Padrão
+  weight: ["400", "variable"], // Ajuste para apenas os pesos permitidos
+  style: ["normal"], 
+  variable: ["--font-leaguegothic"], 
+  subsets: ["latin"], 
+  display: "swap",  
 });
+
 
 export default function RootLayout({ children }) {
   return (
