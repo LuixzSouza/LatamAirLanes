@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { ContainerGrid } from "./container";
+import { ContainerGrid } from "@/components/container";
+
+
 
 export function HomeSection() {
     return(
