@@ -55,6 +55,7 @@ const leaguegothic = League_Gothic({
   display: "swap",  
 });
 
+// tentando corrigir
 
 export default function RootLayout({ children }) {
   return (
