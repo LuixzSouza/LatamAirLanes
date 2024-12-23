@@ -1,4 +1,4 @@
-import { Alumni_Sans, Fira_Sans, Inter, League_Gothic, Mohave, Oswald, Teko } from "next/font/google";
+import { Alumni_Sans, Fira_Sans, Inter, Mohave, Oswald, Teko } from "next/font/google";
 import "./globals.css";
 
 export const metadata = {
@@ -47,20 +47,12 @@ const alumnisans = Alumni_Sans({
   display: "swap",  // Padrão
 });
 
-const leaguegothic = League_Gothic({ 
-  weight: ["400", "variable"], // Ajuste para apenas os pesos permitidos
-  style: ["normal"], 
-  variable: ["--font-leaguegothic"], 
-  subsets: ["latin"], 
-  display: "swap",  
-});
-
 // tentando corrigir
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${oswald.className} ${teko.className} ${mohave.className} ${alumnisans.className} ${leaguegothic.className}`}>{children}</body>
+      <body className={`${inter.className} ${oswald.className} ${teko.className} ${mohave.className} ${alumnisans.className} `}>{children}</body>
     </html>
   );
 }
