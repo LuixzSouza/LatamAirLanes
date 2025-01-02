@@ -44,8 +44,8 @@ const LinksUtils = [
 export function HeaderSection() {
     return(
         <div className="flex flex-col">
-            <ContainerGrid className={"flex items-center justify-between bg-[#fceccc] py-2"} >
-                <div className="flex items-center gap-4" > 
+            <ContainerGrid className={"flex flex-col items-center justify-between bg-[#fceccc] py-2 @desktop:flex-row"} >
+                <div className="w-full flex flex-col-reverse justify-between items-center gap-4 @desktop:flex-row" > 
                     <div className="flex items-center gap-4" >
                         <Image
                         src={"/Y-IconDanger.svg"}
@@ -74,13 +74,14 @@ export function HeaderSection() {
                             Atualizado: 9 de junho - 13:22h
                         </p>
                     </div>
+                    <Image
+                        src={"/Y-IconCLOSE.svg"}
+                        alt="Image"
+                        width={16}
+                        height={16}
+                        className=""
+                    />  
                 </div>
-                <Image
-                    src={"/Y-IconCLOSE.svg"}
-                    alt="Image"
-                    width={16}
-                    height={16}
-                />  
             </ContainerGrid>
             <ContainerGrid className={"bg-[#1B0188]"} >
                     <div className={"flex items-center justify-between text-white py-3 border-b border-[rgba(229,229,229,0.33)]"}>
@@ -96,8 +97,9 @@ export function HeaderSection() {
                                 alt="Pesquisar"
                                 width={24}
                                 height={24}
+                                className="hidden @tablet:flex"
                             />
-                            <div className="flex items-center gap-3">
+                            <div className="hidden items-center gap-3 @tablet:flex">
                                 <Image
                                 src={"/H-Iconbrazil.svg"}
                                 alt="Brazil"
@@ -118,7 +120,7 @@ export function HeaderSection() {
                                 width={16}
                                 height={16}
                                 />
-                                <p>
+                                <p className="hidden @tablet:block" >
                                     Central de ajuda
                                 </p>
                             </div>
@@ -129,16 +131,16 @@ export function HeaderSection() {
                                 width={18}
                                 height={18}
                                 />
-                                <p>
+                                <p className="hidden @tablet:block" >
                                     Login ou Cadastro
                                 </p>
                             </div>
                         </div>
                     </div>
             </ContainerGrid>
-            <ContainerGrid className={"flex items-center justify-between bg-[#1B0188] py-4"}>
+            <ContainerGrid className={"grid grid-cols-3 grid-rows-3 items-center justify-between bg-[#1B0188] py-4 @tablet:grid-cols-9 @tablet:grid-rows-1"}>
                     {LinksUtils.map((item, index) => (
-                        <Link href={item.href} key={index} className="text-white font-inter font-medium text-sm">
+                        <Link href={item.href} key={index} className="w-full text-white font-inter font-medium text-sm">
                             {item.Text}
                         </Link>
                     ))}

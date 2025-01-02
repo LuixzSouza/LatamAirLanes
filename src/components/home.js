@@ -7,9 +7,9 @@ export function HomeSection() {
     return(
         <div>
             <ContainerGrid className={"bg-AirPlane bg-cover bg-center py-28 text-white"}>
-                <div className="flex flex-col items-start">
+                <div className="flex flex-col items-center justify-center text-center @desktop:text-left @desktop:items-start @desktop:justify-start">
                     <span className="text-lg font-bold">Planeje seu próximo voo.</span>
-                    <h1 className="mt-4 mb-8 text-6xl font-bold w-[791px]" >Sonhando com os destinos que desaja conhecer?</h1>
+                    <h1 className="mt-4 mb-8 text-4xl font-bold w-full @tablet:text-5xl @desktop:text-6xl @desktop:max-w-[791px]" >Sonhando com os destinos que desaja conhecer?</h1>
                     <button className="py-3 px-6 bg-white rounded-md text-[#1B0188] font-bold">Compre agora</button>
                     <div className="flex items-center gap-3 mt-14" >
                         <Image

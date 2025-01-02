@@ -24,29 +24,29 @@ export function FiltersSection() {
     return(
         <ContainerGrid>
             <div className="relative -top-16 shadow-md" >
-                <div className="flex items-center bg-[#EFEDF7] rounded-t-md" >
+                <div className="flex flex-col items-center bg-[#EFEDF7] rounded-t-md @desktop:flex-row" >
                     {itemsmore.map((item, index) => (
-                        <div className="group py-5 px-16" key={index} >
+                        <div className="w-full flex items-center justify-around group py-5 gap-4" key={index} >
                             <p className="text-[#8B83AD] font-bold text-base]" >
                                 {item.txt}
                             </p>
                         </div>
                     ))}
                 </div>
-                <div className="py-16 px-28" >
-                    <div className="flex items-center gap-8 mb-6" >
+                <div className="flex flex-col py-16 px-8 @tablet:px-20 @desktop:px-28" >
+                    <div className="w-full flex items-center justify-center gap-8 mb-6 @desktop:justify-start" >
                         <div className="flex items-center" >
                             <input id="default-radio-1" type="radio" value="" name="default-radio" className="w-4 h-4 text-red-600 bg-gray-100 border-gray-30"/>
-                            <label for="default-radio-1" class="ms-2 text-base font-bold text-[#897F9E] ">Ida e volta</label>
+                            <label htmlFor="default-radio-1" className="ms-2 text-base font-bold text-[#897F9E] ">Ida e volta</label>
                         </div>
                         <div className="flex items-center"  >
                             <input id="default-radio-2" type="radio" value="" name="default-radio" className="w-4 h-4 text-red-600 bg-gray-100 border-gray-300 "/>
-                            <label for="default-radio-2" class="ms-2 text-base font-bold text-[#897F9E] ">Somente ida</label>
+                            <label htmlFor="default-radio-2" className="ms-2 text-base font-bold text-[#897F9E] ">Somente ida</label>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between gap-4 mb-12" >
+                    <div className="flex flex-col items-center justify-between gap-4 mb-12 @desktop:flex-row" >
                         <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-28 p-4 border border-[#DAD5E6] rounded-md">
+                            <div className="flex items-center gap-12 p-4 border border-[#DAD5E6] rounded-md @desktop:gap-28">
                                 <div className="" >
                                     <h5 className="text-[#403C49] font-bold mb-1" >Origem</h5>
                                     <p className="text-[#897F9E] font-inter" >Cidade ou destino</p>
@@ -65,7 +65,7 @@ export function FiltersSection() {
                                 height={18}
                                 className="mx-4"
                             />
-                            <div className="flex items-center gap-28 p-4 border border-[#DAD5E6] rounded-md">
+                            <div className="flex items-center gap-6 p-4 border border-[#DAD5E6] rounded-md @tablet:gap-12 @desktop:gap-28">
                                 <div className="" >
                                     <h5 className="text-[#403C49] font-bold mb-1" >Destino</h5>
                                     <p className="text-[#897F9E] font-inter" >Cidade ou destino</p>
@@ -105,7 +105,7 @@ export function FiltersSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex items-center justify-between" >
+                    <div className="flex flex-col items-center justify-between gap-8 @desktop:flex-row @desktop:gap-0" >
                         <div className="flex items-center gap-3" >
                             <Image
                                 src={"/IconAirPlaneRed.svg"}
@@ -121,7 +121,7 @@ export function FiltersSection() {
                             </div>
                             <p className="font-inter font-medium text-red-600" >Utilizar meus Latam Pontos</p>
                         </div>
-                        <button className="flex items-center gap-3 bg-red-600 px-28 py-4 rounded-md" >
+                        <button className="flex items-center gap-3 bg-red-600 px-10 py-4 rounded-md @tablet:px-12 @desktop:px-28" >
                             <Image
                                 src={"/IconWorldAirPlane.svg"}
                                 alt="Volta no mundo"
